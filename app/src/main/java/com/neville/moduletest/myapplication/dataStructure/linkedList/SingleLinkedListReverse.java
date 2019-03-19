@@ -6,9 +6,8 @@ import com.neville.moduletest.myapplication.utils.Node;
 import java.util.LinkedList;
 
 /**
- * Created by niewei on 2018/9/26.
+ * 单链表反转
  */
-//单链表反转
 public class SingleLinkedListReverse {
     public static void main(String[] args) {
         Node header = LinkedListUtil.preNodeList(1, 2, 3, 4, 5, 6);
