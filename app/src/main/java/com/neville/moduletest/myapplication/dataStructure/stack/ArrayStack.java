@@ -8,19 +8,28 @@ public class ArrayStack {
     public static void main(String[] args) {
         MyArrayStack<String> myArrayStack = new MyArrayStack<>();
         myArrayStack.push("1");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("2");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("3");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("4");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("5");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("6");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("7");
+        System.out.print(myArrayStack.peek());
         myArrayStack.push("8");
-        myArrayStack.log();
+        System.out.print(myArrayStack.peek());
 
         myArrayStack.pop();
+        System.out.print(myArrayStack.peek());
         myArrayStack.pop();
+        System.out.print(myArrayStack.peek());
         myArrayStack.pop();
-        myArrayStack.log();
+        System.out.print(myArrayStack.peek());
 
     }
 
@@ -61,10 +70,9 @@ public class ArrayStack {
             return popValue;
         }
 
-        private void log() {
-            for (int i = 0; i < currentSize; i++) {
-                System.out.print(data[i]);
-            }
+        //获得栈顶元素
+        private T peek() {
+            return data[currentSize - 1];
         }
     }
 
