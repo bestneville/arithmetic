@@ -15,6 +15,7 @@ public class SingleLinkedListDelete {
 
     //采用前后指针，相隔N步，后指针到底链表尾部，前指针正好是倒数第N个
     public static Node delete(Node header, int n) {
+        //需要判断一下传null或者n大于链表长度的情况，此处省略了
         Node pre, cur;
         pre = cur = header;
         for (int i = 0; i < n; i++) {
