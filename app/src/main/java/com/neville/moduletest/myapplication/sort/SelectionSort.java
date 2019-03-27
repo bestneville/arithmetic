@@ -1,12 +1,29 @@
 package com.neville.moduletest.myapplication.sort;
 
+import com.neville.moduletest.myapplication.utils.MyUtils;
+
 /**
- * Created by niewei on 2018/9/26.
+ * 选择排序
  */
 
 public class SelectionSort {
     public static void main(String[] args) {
-     String phone="342  432432 432 432";
-     System.out.println(phone.replaceAll(" ",""));
+        int[] data = {2, 2, 9, 6, 7, 4, 0};
+        data = selectionSort(data);
+        MyUtils.logIntArr(data);
+    }
+
+    private static int[] selectionSort(int[] data) {
+        if (data.length <= 1) return data;
+        for (int i = 0; i < data.length; i++) {
+            for (int j = i + 1; j < data.length; j++) {
+                if (data[i] > data[j]) {
+                    int temp = data[i];
+                    data[i] = data[j];
+                    data[j] = temp;
+                }
+            }
+        }
+        return data;
     }
 }

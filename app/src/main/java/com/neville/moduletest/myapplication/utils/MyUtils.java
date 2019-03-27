@@ -5,4 +5,9 @@ package com.neville.moduletest.myapplication.utils;
  */
 
 public class MyUtils {
+    public static void logIntArr(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i]);
+        }
+    }
 }
