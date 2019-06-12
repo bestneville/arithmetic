@@ -16,7 +16,6 @@ public class BinarySearch {
 //        int index = binarySearchType3(8, data);
         int index = binarySearchType4(5, data);
 
-
         System.out.print(index);
 
     }
