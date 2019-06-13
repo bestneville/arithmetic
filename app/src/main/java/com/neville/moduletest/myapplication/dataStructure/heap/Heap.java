@@ -24,7 +24,7 @@ public class Heap {
         heap.insert(12);
 
         heap.removeMax();
-        heap.removeMax();
+//        heap.removeMax();
         heap.log();
     }
 
@@ -73,10 +73,10 @@ public class Heap {
             int i = 1;
             while (true) {
                 int max = i;
-                if (i * 2 < count && data[i * 2] > data[i]) {
+                if (i * 2 <= count && data[i * 2] > data[i]) {
                     max = i * 2;
                 }
-                if (i * 2 + 1 < count && data[i * 2 + 1] > data[max]) {
+                if (i * 2 + 1 <= count && data[i * 2 + 1] > data[max]) {
                     max = i * 2 + 1;
                 }
                 if (max == i) break;//说明没有比该元素大的左右元素，退出循环
