@@ -26,10 +26,14 @@ public class Graph {
             }
         }
 
-        private void addEdge(int s, int t) {
+        public void addEdge(int s, int t) {
             //无向图一条边存两次
             adj[s].add(t);
             adj[t].add(s);
+        }
+
+        public LinkedList<Integer>[] getAdj() {
+            return adj;
         }
     }
 }
