@@ -4,14 +4,14 @@ package com.neville.moduletest.myapplication.utils;
  * Created by niewei on 2019/6/20.
  */
 
-public class TrieTreeNode {
+public class TrieNode {
     public boolean isEndingChar = false;
     public char data;
-    public TrieTreeNode[] children;
+    public TrieNode[] children;
 
-    public TrieTreeNode(char data) {
+    public TrieNode(char data) {
         this.data = data;
-        children = new TrieTreeNode[26];
+        children = new TrieNode[26];
     }
 
 }

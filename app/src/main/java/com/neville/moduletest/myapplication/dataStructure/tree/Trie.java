@@ -1,14 +1,14 @@
 package com.neville.moduletest.myapplication.dataStructure.tree;
 
-import com.neville.moduletest.myapplication.utils.TrieTreeNode;
+import com.neville.moduletest.myapplication.utils.TrieNode;
 
 /**
  * Created by niewei on 2019/6/20.
  */
 
 //字典树
-public class TrieTree {
-    private static TrieTreeNode root = new TrieTreeNode('/');//存储无意义字符;
+public class Trie {
+    private static TrieNode root = new TrieNode('/');//存储无意义字符;
 
     public static void main(String[] args) {
         insertNode("hi");
@@ -23,11 +23,11 @@ public class TrieTree {
 
     private static void insertNode(String insertStr) {
         char[] data = insertStr.toCharArray();
-        TrieTreeNode p = root;
+        TrieNode p = root;
         for (int i = 0; i < data.length; i++) {
             int index = data[i] - 'a';
             if (p.children[index] == null) {
-                TrieTreeNode newNode = new TrieTreeNode(data[i]);
+                TrieNode newNode = new TrieNode(data[i]);
                 p.children[index] = newNode;
             }
             p = p.children[index];
@@ -37,7 +37,7 @@ public class TrieTree {
 
     private static boolean find(String findStr) {
         char[] data = findStr.toCharArray();
-        TrieTreeNode p = root;
+        TrieNode p = root;
         for (int i = 0; i < data.length; i++) {
             int index = data[i] - 'a';
             if (p.children[index] == null) {
